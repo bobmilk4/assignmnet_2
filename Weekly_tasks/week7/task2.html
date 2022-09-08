@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    <component1 :person="person"></component1>
+    <component1 v-for="fruit in fruits" :fruit="fruit"></component1>
+    </div>
+</body>
+</html>
+<script>
+    var component1 = {
+        template: '<div>{{ fruit }}</div>',
+    props: ['person', 'fruit'],
+    };
+    var app = new Vue({
+        el: '#app',
+
+        data: {
+            person: {
+                firstName: 'John',
+                lastName: 'Doe',
+            },
+            fruits: ['apple', 'banana', 'orange'],
+        },
+        components: {
+            component1,
+        },
+    });
+</script>

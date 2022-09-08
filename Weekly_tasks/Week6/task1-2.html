@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+
+
+    <div id="app">
+        <p>first name:</p>
+      <input v-model="fname" placeholder="first name">
+        <br>
+        <p>last name:</p>
+        <input v-model="lname" placeholder="last name">
+        <br>
+        <p>password:</p>
+        <input v-model="password" type="password" placeholder="password">
+      <p>first name is: {{ fname }}</p>
+      <p>last name is: {{ lname }}</p>
+      <p>last name is: {{ password }}</p>
+      <div></div>
+       <input type="checkbox" id="checkbox" v-model="checked" />
+       <label for="checkbox">{{ checked }}</label>
+       
+      <div id="checkbox">
+      <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+      <label for="jack">Jack</label>
+      <input type="checkbox" id="john" value="John" v-model="checkedNames">
+      <label for="john">John</label>
+      <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+      <label for="mike">Mike</label>
+      <br>
+      <span>Checked names: {{ checkedNames }}</span>
+      </div>
+        
+        
+      </body>
+      
+      </html>
+      
+      
+      <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          fname: '',
+          lname: '',
+          password:'',
+          checked: false,
+          checkedNames:[],
+        }
+      });
+      </script>

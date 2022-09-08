@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet">
+<title>Page Title</title>
+
+<style>
+.example {
+    background-color: red;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<p>this is an image tag</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Deakin_University_Logo_2017.svg/400px-Deakin_University_Logo_2017.svg.png" alt="DakinImage" width="100" height="120">
+
+<p>this is a classes tag</p>
+<div class="example">
+    <h2>this is to show how classes work</h2>
+  </div>
+
+<p>this is a table tag</p>
+<table>
+    <tr>
+      <th>Row 1, column 1</th>
+      <th>Row 1, column 2</th>
+      <th>Row 1, column 3</th>
+    </tr>
+    <tr>
+      <td>Row 2, column 1</td>
+      <td>Row 2, column 2</td>
+      <td>Row 2, column 3</td>
+    </tr>
+    <tr>
+      <td>Row 3, column 1</td>
+      <td>Row 3, column 2</td>
+      <td>Row 3, column 3</td>
+    </tr>
+  </table>
+
+<p>this is a form tag</p>
+<form>
+    <label style="color:red;">First name:</label><br>
+    <input type="text" value="First Name Here"><br>
+    <label style="color:red;">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Last Name Here"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+<p>this is a hyperlink tag</p>
+<a href="https://sync.deakin.edu.au/home">deakinsync homepage</a>
+<br><br>
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+
+  <p id="demo"></p>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+    </head>
+    <body>
+
+        <div id="app"> {{ message }} 
+        <p v-if="display">this is displayed when display is true</p>
+        <p v-else>this is displayed when display is false</p>
+        <p v-show="display">v-show is similar to v-if, however is still present in DOM. this is displayed when display is true</p>
+        
+        <ul>
+            <li v-for="item in 15">{{ item }}</li>
+          </ul>
+
+          <input v-model="message" placeholder="edit me">
+<p>Message is: {{ message }}</p>
+
+    </div>
+    
+        <div id="app2"><button @click="count++">count is: {{ count }}</button></div>
+        
+    </body>
+</html>
+<script>
+    let app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    display: true
+  }
+});
+
+
+
+let app2 = new Vue({
+  el: '#app2',
+  data: {
+    count: 0,
+  }
+});
+
+app2.count = 2;
+</script>
